@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cozydo.mapper.PlaceMapper">
+
+	<select id="findByLatAndLon" parameterType="map" resultType="com.cozydo.model.place.PlaceDto">
+		SELECT p.place_idx as placeIdx, p.place_name as placeName, p.sub_category as subCategory, p.gu, p.dong, p.address_name as addressName,
+				p.road_address_name as roadAddressName, p.place_lon as placeLon, p.place_lat as placeLat, IF(#{level} &gt;= g.meet_prohibition AND g.meet_prohibition != 0, 1, 0) as meetProhibition,
+				6371*acos(cos(radians(#{lat}))*cos(radians(p.place_lat))*cos(radians(p.place_lon)-radians(#{lon})) +sin(radians(#{lat}))*sin(radians(p.place_lat))) as distance
+		FROM place p
+		LEFT JOIN category c on p.sub_category = c.sub_category 
+		LEFT JOIN guide_line g on p.sub_category = g.sub_category
+		WHERE place_name LIKE CONCAT('%',#{keyword},'%') OR c.sub_category_name LIKE CONCAT('%',#{keyword},'%')
+		HAVING distance &lt;= 5
+		ORDER BY distance
+		LIMIT 30
+		
+	</select>
+	
+	<select id="findByIdx" parameterType="map" resultType="com.cozydo.model.place.PlaceDto">
+		SELECT place_idx as placeIdx, place_name as placeName, p.sub_category as subCategory, gu, p.dong, address_name as addressName,
+				road_address_name as roadAddressName, place_lon as placeLon, place_lat as placeLat,
+				IF(#{level} &gt;= g.not_food AND g.not_food != 0 , 1, 0) as notFood, IF(#{level} &gt;= g.seat_one_apart AND g.seat_one_apart != 0, 1, 0) as seatOneApart,
+				IF(#{level} &gt;= g.meet_prohibition AND g.meet_prohibition != 0, 1, 0) as meetProhibition, IF(#{level} &gt;= g.deadline_nine AND g.deadline_nine != 0, 1, 0) as deadlineNine,
+				IF(#{level} &gt;= g.qr_code AND g.qr_code != 0, 1, 0) as qrCode, IF(#{level} &gt;= g.nomorepeople_nine AND g.nomorepeople_nine != 0, 1, 0) as nomorepeopleNine,
+				IF(#{level} &gt;= g.twopeople_onehour AND g.twopeople_onehour != 0, 1, 0) as twopeopleOnehour, IF(#{level} &gt;= g.shower_only AND g.shower_only != 0, 1, 0) as showerOnly,
+				IF(#{level} &gt;= g.lessthan_100 AND g.lessthan_100 != 0, 1, 0) as lessthen100, IF(#{level} &gt;= g.lessthan_50 AND g.lessthan_50 != 0, 1, 0) as lessthen50,
+				IF(#{level} &gt;= g.family_only AND g.family_only != 0, 1, 0) as familyOnly, IF(#{level} &gt;= g.not_shower AND g.not_shower != 0, 1, 0) as notShower
+		FROM place p
+		LEFT JOIN guide_line g on p.sub_category = g.sub_category
+		WHERE place_idx = #{placeIdx}
+	</select>
+	
+	<select id="getLikes" parameterType="map" resultType="int">
+		SELECT if(count(*) = 1, 1, 0)
+		FROM likes 
+		WHERE user_idx = #{userIdx} AND place_idx = #{placeIdx};
+	</select>
+	
+	<select id="getReview" parameterType="map" resultType="com.cozydo.model.review.ReviewResponseDto">
+		SELECT r.review_idx as reviewIdx, r.place_idx as placeIdx, r.user_idx as userIdx, u.user_nickname as userNickname, r.review_score as reviewScore, r.content, r.write_time as writeTime
+		FROM review r
+		LEFT JOIN user u on u.user_idx = r.user_idx
+		WHERE place_idx = #{placeIdx}
+		ORDER BY r.review_idx desc;
+	</select>
+	
+	<select id="findRatingByIdx" parameterType="map" resultType="String">
+		SELECT AVG(review_score) as rating
+		FROM review 
+		WHERE place_idx = #{placeIdx}
+		GROUP BY(place_idx);
+	</select>
+</mapper>
