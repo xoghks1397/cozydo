@@ -45,6 +45,4 @@
 ### 기술 스텍 및 시스템 구조
 ![시스템 구조](https://user-images.githubusercontent.com/62299120/108689828-eaa37300-753c-11eb-97bf-bd2b4ebf7e15.PNG)
 
-![시스템 구조](https://user-images.githubusercontent.com/62299120/108689990-250d1000-753d-11eb-8650-460cceec1010.PNG)
-
-
+![시스템 구조2](https://user-images.githubusercontent.com/62299120/108690070-3fdf8480-753d-11eb-8787-183756fe3fa7.PNG)
