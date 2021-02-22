@@ -39,7 +39,8 @@
 - 마이 페이지에선 작성한 리뷰, 좋아요 누른 장소 확인 가능 및 클릭 시 장소 상세 페이지로 이동 가능
 
 ### db ead 
-![ear](https://user-images.githubusercontent.com/62299120/108688596-72887d80-753b-11eb-82eb-6eced9c8444d.png)
+![erd](https://user-images.githubusercontent.com/62299120/108690605-e75cb700-753d-11eb-8da6-62257001c3c3.PNG)
+
 
 
 ### 기술 스택 및 시스템 구조
