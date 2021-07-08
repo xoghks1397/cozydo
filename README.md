@@ -42,7 +42,7 @@
 ## 기능 설명
 
 ### 메인 화면
-
+<img src ="https://user-images.githubusercontent.com/62299120/124867162-83242680-dff8-11eb-844a-7ec850e3236d.png">
 ![image](https://user-images.githubusercontent.com/62299120/124867162-83242680-dff8-11eb-844a-7ec850e3236d.png  width="10" height="10")
 
 - 로고 밑 일일 학진자 정보 제공
