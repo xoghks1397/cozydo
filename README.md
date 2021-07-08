@@ -88,7 +88,7 @@
 
 ### 회원가입 시 이메일 인증
 
-<img src ="https://user-images.githubusercontent.com/62299120/124869386-1874ea00-dffc-11eb-9e3e-5885266acdf4.png" width="25%" height="25%"><img src ="https://user-images.githubusercontent.com/62299120/124869384-16ab2680-dffc-11eb-99f8-c7c9235606b4.png" width="25%" height="25%"><img src ="https://user-images.githubusercontent.com/62299120/124869371-13b03600-dffc-11eb-9a28-24c06a9e3dc3.png" width="25%" height="25%">
+<img src ="https://user-images.githubusercontent.com/62299120/124869386-1874ea00-dffc-11eb-9e3e-5885266acdf4.png" width="25%" height="25%"> <img src ="https://user-images.githubusercontent.com/62299120/124869384-16ab2680-dffc-11eb-99f8-c7c9235606b4.png" width="25%" height="25%"> <img src ="https://user-images.githubusercontent.com/62299120/124869371-13b03600-dffc-11eb-9a28-24c06a9e3dc3.png" width="25%" height="25%">
 
 - 이메일 인증을 통해 보안성 증가하였고, 이메일 인증 후에만 로그인이 가능하게 구현
 
