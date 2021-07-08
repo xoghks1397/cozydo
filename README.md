@@ -39,7 +39,8 @@
 - 마이 페이지에선 작성한 리뷰, 좋아요 누른 장소 확인 가능 및 클릭 시 장소 상세 페이지로 이동 가능
 
 
-![image](https://user-images.githubusercontent.com/62299120/124867051-5cfe8680-dff8-11eb-85f7-332ade266f30.png)
+![image](https://user-images.githubusercontent.com/62299120/124867162-83242680-dff8-11eb-844a-7ec850e3236d.png)
+
 
 ### db ead 
 ![erd](https://user-images.githubusercontent.com/62299120/108690605-e75cb700-753d-11eb-8da6-62257001c3c3.PNG)
