@@ -43,7 +43,7 @@
 
 ### 메인 화면
 
-![image](https://user-images.githubusercontent.com/62299120/124867162-83242680-dff8-11eb-844a-7ec850e3236d.png)
+![image](https://user-images.githubusercontent.com/62299120/124867162-83242680-dff8-11eb-844a-7ec850e3236d.png){: width="100" height="100"}
 
 - 로고 밑 일일 학진자 정보 제공
 - 현재 위치를 기반으로 거리두기 단계 자동 설정
