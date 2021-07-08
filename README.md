@@ -58,6 +58,8 @@
 - 장소 클릭 시, 장소 상세 페이지로 이동
 
 ### 검색 결과 화면(지도)
+![image74](https://user-images.githubusercontent.com/62299120/124868896-6c330380-dffb-11eb-850d-7394b4bdd97a.png)
+
 - 검색결과에 해당하는 장소 마커로 펴시
 - 마커 클릭시 장소 이름 확인 가능
 - 장소 이름 클릭 시 장소 상세 페이지로 이동
@@ -70,6 +72,27 @@
 - 아이콘을 통해 한눈에 세부지침 확인
 - 좋아요 및 댓글 기능
 - 해당 장소에 대한 정보 수정 요청사항 등록 가능
+
+### 코로나 확진자 정보 화면
+![image87](https://user-images.githubusercontent.com/62299120/124869294-f3807700-dffb-11eb-8c4c-ee0644b79a2f.gif)
+
+- 일일 확진자 정보(확진환자, 격리해제, 사망자)
+- 일주일 간 일별 확진자 수 그래프
+- 지역별 총 확진자 수, 일일 확진자 수 정보
+
+### 마이페이지
+![image103](https://user-images.githubusercontent.com/62299120/124869344-072bdd80-dffc-11eb-9bff-eb19d0d746d0.png)
+
+- 좋아요 누른 장소 확인 가능
+- 작성한 리뷰 확인 가능
+- 로그아웃 및 회원탈퇴 기능
+
+### 회원가입 시 이메일 인증
+![image93](https://user-images.githubusercontent.com/62299120/124869386-1874ea00-dffc-11eb-9e3e-5885266acdf4.png)
+![image95](https://user-images.githubusercontent.com/62299120/124869384-16ab2680-dffc-11eb-99f8-c7c9235606b4.png)
+![image96](https://user-images.githubusercontent.com/62299120/124869371-13b03600-dffc-11eb-9a28-24c06a9e3dc3.png)
+- 이메일 인증을 통해 보안성 증가하였고, 이메일 인증 후에만 로그인이 가능하게 구현
+
 ### db ead 
 ![erd](https://user-images.githubusercontent.com/62299120/108690605-e75cb700-753d-11eb-8da6-62257001c3c3.PNG)
 
