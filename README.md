@@ -64,7 +64,8 @@
 - 집합 금지 장소는 검은색으로 표시
 
 ### 장소 상세 페이지
-![image](https://user-images.githubusercontent.com/62299120/124867495-2b39ef80-dff9-11eb-808d-41daeb7d6f9f.png)
+![image82](https://user-images.githubusercontent.com/62299120/124868584-ee6ef800-dffa-11eb-8060-e64685d18596.gif)
+
 - 장소 상세 내역 확인 가능
 - 아이콘을 통해 한눈에 세부지침 확인
 - 좋아요 및 댓글 기능
